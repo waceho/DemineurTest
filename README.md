@@ -35,3 +35,8 @@ la découverte des cases vide adjacente
 L’affichage du meilleur score
 Faire une version connectée permettant des défis entre joueurs
 Le design devra être repensé pour être plus fun
+
+### Durée du développement ###
+ Du 12 au 16/02
+  ~2h/jour
+  soit environ 9h.
