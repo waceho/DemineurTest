@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Demineur</string>
+    <string name="Continuer">Passer au jeu</string>
+    <string name="oui">Oui</string>
+    <string name="non">Non</string>
+    <string name="titreInstruction">Demineur | Instruction</string>
+    <string name="titreChoixMode">Veuillez choisir un niveau</string>
+    <string name="FinJeuMessage">Terminé, voulez-vous reprendre ?</string>
+    <string name="instruction">
+
+1. Passer au jeu
+        2.  Choisissez le niveau de difficulté
+        3.  Déroulement du jeu :
+        4.  Cliquez sur une case pour la découvrir
+        Vous perdez la partie si vous tombez sur une mine.
+        Vous pouvez marquez une case avec un drapeau en faisant un appuie long.
+        Le numéro des cases indique la position d\'une mine par rapport à la case
+        La partie est terminée lorque vous avez découver toutes les mines du terrain, ou si vous avez malencontreusement cliquer sur une case minée !
+
+</string>
+
+    <string-array name="difficulte">
+        <item>FACILE</item>
+        <item>NORMAL</item>
+        <item>AVANCE</item>
+    </string-array>
+</resources>

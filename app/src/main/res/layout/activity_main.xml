@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.madjoh.dossou.demineurtest.demineur.FullscreenActivity">
+
+    <GridView
+        android:id="@+id/grilleCase"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:columnWidth="50dp"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:elevation="19dp">
+
+    </GridView>
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="1"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:id="@+id/relativeLayout"
+        android:layout_alignBottom="@+id/grilleCase"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:id="@+id/imageButton2"
+            android:layout_weight="0.09"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="39dp"
+            android:layout_marginEnd="39dp" />
+
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:id="@+id/ImageEtat"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:drawable/menuitem_background"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/resultat"
+            android:layout_alignTop="@+id/imageButton2"
+            android:layout_alignBottom="@+id/ImageEtat"
+            android:layout_toLeftOf="@+id/Minuterie"
+            android:layout_toRightOf="@+id/ImageEtat"
+            android:layout_toEndOf="@+id/ImageEtat"
+            android:textColor="@android:color/holo_red_light"
+            android:textStyle="normal|bold"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/Minuterie"
+            android:textStyle="normal|bold"
+            android:textColor="@android:color/black"
+            android:layout_alignTop="@+id/imageButton2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
