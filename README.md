@@ -8,7 +8,7 @@ Il faut ensuite cliquer sur cette vue pour afficher le bouton permettant de pass
 
 L'utilisateur devra donc choisir un niveau de difficulté afin de pouvoir jouer.
 
-Dès lors que le jeu est lancé, le jeu est chronométré avec un émoticon neutre. 
+Dès lors que le jeu est lancé, une minuterie s'affiche à droite et un émoticon neutre à gauche. 
 
 Un clique sur une case fait découvrir la case
 
