@@ -82,8 +82,8 @@ class CaseAdapter extends BaseAdapter implements NiveauGenerateur {
 
     /*
      * Methode de suivi du jeu *******************************************************************************************
-     * @param : i : position de la case
-     * @param : gridView : la vue contenant les cases
+     * @param i : position de la case
+     * @param gridView : le layout contenant les cases
      */
     private void suiviJeu(final int i, View gridView){
     // initialisattion du bouton de la case
@@ -109,7 +109,7 @@ class CaseAdapter extends BaseAdapter implements NiveauGenerateur {
                 // cas d'une case vide
                 if (global.getNumeroGenere().get(i).toString().equals(VIDE))
                 {
-
+                    // on change juste la couleur de fond de la case
                     caseB.setBackgroundColor(context.getResources().getColor(R.color.cardview_light_background));
 
                 }else {

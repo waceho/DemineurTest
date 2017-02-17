@@ -12,7 +12,6 @@ public interface NiveauGenerateur {
     int AVANCE = 7;
     String MINE = "*";
     String VIDE = "0";
-
     String GAGNE = "GAGNE";
     String PERDU = "PERDU";
     int NbreMine = 8;

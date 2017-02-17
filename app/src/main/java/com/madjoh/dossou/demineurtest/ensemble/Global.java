@@ -10,6 +10,18 @@ import java.util.ArrayList;
 
 public class Global extends Application {
 
+    // tableau des numéros obtenu aléatoirement
+    private ArrayList NumeroGenere;
+
+    // nombre de case découvert //
+    private int NombreCaseDecouvert;
+
+    // niveau de difficulté choisi
+    private String ModeEncours ;
+
+    // tableau des modes de difficulte
+    private ArrayList ListMode;
+
     public String getModeEncours() {
         return ModeEncours;
     }
@@ -17,8 +29,6 @@ public class Global extends Application {
     public void setModeEncours(String modeEncours) {
         ModeEncours = modeEncours;
     }
-
-    private String ModeEncours ;
 
     public ArrayList getListMode() {
         return ListMode;
@@ -28,8 +38,6 @@ public class Global extends Application {
         ListMode = listMode;
     }
 
-    // tableau des modes de difficulte
-    private ArrayList ListMode;
 
     public ArrayList getNumeroGenere() {
         return NumeroGenere;
@@ -38,8 +46,6 @@ public class Global extends Application {
     public void setNumeroGenere(ArrayList numeroGenere) {
         NumeroGenere = numeroGenere;
     }
-    // tableau des numéros obtenu aléatoirement
-    private ArrayList NumeroGenere;
 
     public int getNombreCaseDecouvert() {
         return NombreCaseDecouvert;
@@ -49,5 +55,4 @@ public class Global extends Application {
         NombreCaseDecouvert = nombreCaseDecouvert;
     }
 
-    private int NombreCaseDecouvert;
 }

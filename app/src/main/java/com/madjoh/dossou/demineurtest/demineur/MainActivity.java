@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements NiveauGenerateur 
 
     private long TimerEnMilliseconde = 0L;
 
-    private long timeSwapBuff = 0L;
+    private long timeSwap = 0L;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,11 +59,11 @@ public class MainActivity extends AppCompatActivity implements NiveauGenerateur 
     // récupération du nombre de difficulté depuis @String -> Array
         int NombreDifficulte = getResources().getStringArray(R.array.difficulte).length;
 
-    // Ajout des difficultés dans un tableau temporaire***************************************************************
+    // Ajout des difficultés dans un tableau temporaire
         ArrayList TDifficulte = new ArrayList();
         TDifficulte.addAll(Arrays.asList(getResources().getStringArray(R.array.difficulte)).subList(0, NombreDifficulte));
 
-        // Ajout du tableau dans le controleur **********************************************************
+        // Ajout du tableau dans le controleur
         global.setListMode(TDifficulte);
 
         gridView = (GridView) findViewById(R.id.grilleCase);
@@ -99,6 +99,11 @@ public class MainActivity extends AppCompatActivity implements NiveauGenerateur 
         StopMinuterie();
     }
 
+    /***********************************************************************************************
+     * configuration de la gridView avec les cases
+     * @param NbreColonne : nombre de colonne
+     * @param mode : niveau de difficulté
+     */
     public void CreationGrille(int NbreColonne, String mode){
 
         gridView.setNumColumns(NbreColonne);
@@ -184,7 +189,7 @@ public class MainActivity extends AppCompatActivity implements NiveauGenerateur 
 
             TimerEnMilliseconde = SystemClock.uptimeMillis() - startTime;
 
-            long HeureMAJ = timeSwapBuff + TimerEnMilliseconde;
+            long HeureMAJ = timeSwap + TimerEnMilliseconde;
 
             int seconds = (int) (HeureMAJ / 1000);
 
@@ -214,13 +219,14 @@ public class MainActivity extends AppCompatActivity implements NiveauGenerateur 
 
     // Methode d'arrêt de la minuterie *************************************************************
     public void StopMinuterie(){
-        timeSwapBuff += TimerEnMilliseconde;
+        timeSwap += TimerEnMilliseconde;
         MonHandler.removeCallbacks(updateTimer);
     }
 
     /*
       * Methode de changement emoticon
-      * @resultat : true si on tombe sur une mine***************************************************
+      * @param resultat : true si on tombe sur une mine*********************************************
+      * @param message : le message GAGNE ou PERDU
       */
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public void ChangeEmoti(boolean resultat, String message){
